@@ -1,0 +1,263 @@
+:root {
+  --color-bg: #f4f7f6;
+  --color-card: #ffffff;
+  --color-primary: #0f766e;
+  --color-primary-hover: #0b5a54;
+  --color-text: #1e2b2a;
+  --color-muted: #667471;
+  --color-border: #dde5e3;
+  --color-error: #c0392b;
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--color-bg);
+  color: var(--color-text);
+}
+
+.page {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 32px 20px 60px;
+}
+
+.page-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.login-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: none;
+}
+
+.card {
+  background: var(--color-card);
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  padding: 28px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+}
+
+.login-card {
+  width: 100%;
+  max-width: 380px;
+}
+
+h1 {
+  margin: 0 0 4px;
+  font-size: 1.6rem;
+}
+
+.subtitle {
+  color: var(--color-muted);
+  margin: 0 0 20px;
+}
+
+label {
+  display: block;
+  font-size: 0.9rem;
+  margin-bottom: 6px;
+  font-weight: 600;
+}
+
+input[type='tel'],
+input[type='text'] {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  font-size: 1rem;
+  margin-bottom: 8px;
+}
+
+input:focus {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 1px;
+}
+
+button {
+  cursor: pointer;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 16px;
+}
+
+form button[type='submit'] {
+  width: 100%;
+  background: var(--color-primary);
+  color: white;
+  margin-top: 8px;
+  transition: background 0.15s ease;
+}
+
+form button[type='submit']:hover:not(:disabled) {
+  background: var(--color-primary-hover);
+}
+
+form button[type='submit']:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+button.secondary {
+  background: transparent;
+  border: 1px solid var(--color-border);
+  color: var(--color-text);
+}
+
+button.secondary:hover {
+  background: #eceef3;
+}
+
+.back-btn {
+  margin-bottom: 20px;
+}
+
+.error-text {
+  color: var(--color-error);
+  font-size: 0.85rem;
+  margin: 0 0 8px;
+}
+
+.hint {
+  color: var(--color-muted);
+  font-size: 0.8rem;
+  margin-top: 16px;
+  text-align: center;
+}
+
+.search-bar {
+  margin-bottom: 20px;
+}
+
+.status {
+  color: var(--color-muted);
+  text-align: center;
+  padding: 24px 0;
+}
+
+.user-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.user-card {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  text-align: left;
+  background: var(--color-card);
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
+  padding: 14px 16px;
+  width: 100%;
+  transition: box-shadow 0.15s ease, transform 0.15s ease;
+}
+
+.user-card:hover {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transform: translateY(-1px);
+}
+
+.avatar {
+  flex-shrink: 0;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--color-primary);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.user-card-info h3 {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.user-card-info p {
+  margin: 2px 0 0;
+  font-size: 0.85rem;
+  color: var(--color-muted);
+}
+
+.muted {
+  color: var(--color-muted);
+}
+
+.detail-card dl {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  row-gap: 10px;
+  column-gap: 12px;
+  margin-top: 16px;
+}
+
+.detail-card dt {
+  font-weight: 600;
+  color: var(--color-muted);
+}
+
+.detail-card dd {
+  margin: 0;
+}
+
+/* Responsive tweaks for small / mobile screens */
+@media (max-width: 480px) {
+  .page {
+    padding: 20px 14px 40px;
+  }
+
+  .login-card {
+    padding: 20px;
+  }
+
+  .page-header {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  h1 {
+    font-size: 1.35rem;
+  }
+
+  .user-card {
+    padding: 12px;
+    gap: 10px;
+  }
+
+  .avatar {
+    width: 38px;
+    height: 38px;
+    font-size: 1rem;
+  }
+
+  .user-card-info h3 {
+    font-size: 0.95rem;
+  }
+
+  .detail-card dl {
+    grid-template-columns: 1fr;
+    row-gap: 4px;
+  }
+
+  .detail-card dt {
+    margin-top: 8px;
+  }
+}
