@@ -5,7 +5,7 @@ for a technical interview task. It has three
 pages — **Login**, **Main (list + search)**, and **Detail** — backed by the
 [JSONPlaceholder](https://jsonplaceholder.typicode.com) public API.
 
-**Live demo:** [https://react-demo-app.vercel.app](https://react-demo-app.vercel.app) *(update this link once deployed — see Deployment section below)*
+**Live demo:** [https://react-demo-app-pied.vercel.app](https://react-demo-app-pied.vercel.app)
 Demo login: `+254712345678`
 
 ## Tech stack
